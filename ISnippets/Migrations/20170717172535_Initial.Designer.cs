@@ -8,7 +8,7 @@ using ISnippets.Models;
 namespace ISnippets.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20170717030327_Initial")]
+    [Migration("20170717172535_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,17 +21,22 @@ namespace ISnippets.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("CodeSnippet");
+                    b.Property<string>("CodeSnippet")
+                        .IsRequired();
 
                     b.Property<string>("Description");
 
-                    b.Property<string>("Language");
+                    b.Property<string>("Language")
+                        .IsRequired();
 
-                    b.Property<string>("Title");
+                    b.Property<string>("Title")
+                        .IsRequired();
+
+                    b.Property<DateTime>("UpdatedAt");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Snippets");
+                    b.ToTable("Snippet");
                 });
         }
     }

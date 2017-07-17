@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using MySQL.Data.Entity.Extensions;
 
 namespace ISnippets
 {
@@ -15,11 +16,6 @@ namespace ISnippets
     {
         public Startup(IHostingEnvironment env)
         {
-            using (var client = new MyDbContext())
-            {
-                client.Database.EnsureCreated();
-            }
-
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
@@ -33,7 +29,11 @@ namespace ISnippets
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddEntityFrameworkSqlite().AddDbContext<MyDbContext>();
+            services.AddDbContext<MyDbContext>(options =>
+                options.UseMySQL(
+                    "server=localhost;userid=root;password=Karamanduca1!;database=snippets_db;"
+                )
+            );
 
             // Add framework services.
             services.AddMvc();

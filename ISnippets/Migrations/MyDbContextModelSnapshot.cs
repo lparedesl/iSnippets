@@ -20,17 +20,22 @@ namespace ISnippets.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("CodeSnippet");
+                    b.Property<string>("CodeSnippet")
+                        .IsRequired();
 
                     b.Property<string>("Description");
 
-                    b.Property<string>("Language");
+                    b.Property<string>("Language")
+                        .IsRequired();
 
-                    b.Property<string>("Title");
+                    b.Property<string>("Title")
+                        .IsRequired();
+
+                    b.Property<DateTime>("UpdatedAt");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Snippets");
+                    b.ToTable("Snippet");
                 });
         }
     }
