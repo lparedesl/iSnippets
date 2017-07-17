@@ -1,0 +1,9 @@
+D:\Google Drive\Documents\UNCC Coding Bootcamp\20 C#\Homework\iSnippets\ISnippets\bin\Debug\netcoreapp1.1\ISnippets.deps.json
+D:\Google Drive\Documents\UNCC Coding Bootcamp\20 C#\Homework\iSnippets\ISnippets\bin\Debug\netcoreapp1.1\ISnippets.runtimeconfig.json
+D:\Google Drive\Documents\UNCC Coding Bootcamp\20 C#\Homework\iSnippets\ISnippets\bin\Debug\netcoreapp1.1\ISnippets.runtimeconfig.dev.json
+D:\Google Drive\Documents\UNCC Coding Bootcamp\20 C#\Homework\iSnippets\ISnippets\bin\Debug\netcoreapp1.1\ISnippets.dll
+D:\Google Drive\Documents\UNCC Coding Bootcamp\20 C#\Homework\iSnippets\ISnippets\bin\Debug\netcoreapp1.1\ISnippets.pdb
+D:\Google Drive\Documents\UNCC Coding Bootcamp\20 C#\Homework\iSnippets\ISnippets\obj\Debug\netcoreapp1.1\ISnippets.csprojResolveAssemblyReference.cache
+D:\Google Drive\Documents\UNCC Coding Bootcamp\20 C#\Homework\iSnippets\ISnippets\obj\Debug\netcoreapp1.1\ISnippets.AssemblyInfo.cs
+D:\Google Drive\Documents\UNCC Coding Bootcamp\20 C#\Homework\iSnippets\ISnippets\obj\Debug\netcoreapp1.1\ISnippets.dll
+D:\Google Drive\Documents\UNCC Coding Bootcamp\20 C#\Homework\iSnippets\ISnippets\obj\Debug\netcoreapp1.1\ISnippets.pdb

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ISnippets.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -14,6 +15,11 @@ namespace ISnippets
     {
         public Startup(IHostingEnvironment env)
         {
+            using (var client = new MyDbContext())
+            {
+                client.Database.EnsureCreated();
+            }
+
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
@@ -27,6 +33,8 @@ namespace ISnippets
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddEntityFrameworkSqlite().AddDbContext<MyDbContext>();
+
             // Add framework services.
             services.AddMvc();
         }
