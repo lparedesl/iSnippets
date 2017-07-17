@@ -8,7 +8,7 @@ using ISnippets.Models;
 namespace ISnippets.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20170717172535_Initial")]
+    [Migration("20170717174158_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -20,6 +20,7 @@ namespace ISnippets
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddJsonFile("config.json", optional: true, reloadOnChange: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
@@ -29,10 +30,10 @@ namespace ISnippets
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var sqlConnectionString = Configuration.GetConnectionString("DataAccessMySqlProvider");
+
             services.AddDbContext<MyDbContext>(options =>
-                options.UseMySQL(
-                    "server=localhost;userid=root;password=Karamanduca1!;database=snippets_db;"
-                )
+                options.UseMySQL(sqlConnectionString)
             );
 
             // Add framework services.
