@@ -17,6 +17,7 @@ namespace ISnippets.Models
         public string Description { get; set; }
 
         [Required]
+        [StringLength(4010)]
         public string CodeSnippet { get; set; }
 
         [Required]

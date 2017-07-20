@@ -22,25 +22,25 @@ namespace ISnippets.Models
             base.OnModelCreating(builder);
         }
 
-        public override int SaveChanges()
-        {
-            ChangeTracker.DetectChanges();
+        //public override int SaveChanges()
+        //{
+        //    ChangeTracker.DetectChanges();
 
-            UpdateUpdatedProperty<Snippet>();
+        //    UpdateUpdatedProperty<Snippet>();
 
-            return base.SaveChanges();
-        }
+        //    return base.SaveChanges();
+        //}
 
-        private void UpdateUpdatedProperty<T>() where T : class
-        {
-            var modifiedSourceInfo =
-                ChangeTracker.Entries<T>()
-                    .Where(e => e.State == EntityState.Added || e.State == EntityState.Modified);
+        //private void UpdateUpdatedProperty<T>() where T : class
+        //{
+        //    var modifiedSourceInfo =
+        //        ChangeTracker.Entries<T>()
+        //            .Where(e => e.State == EntityState.Added || e.State == EntityState.Modified);
 
-            foreach (var entry in modifiedSourceInfo)
-            {
-                entry.Property("UpdatedAt").CurrentValue = DateTime.UtcNow;
-            }
-        }
+        //    foreach (var entry in modifiedSourceInfo)
+        //    {
+        //        entry.Property("UpdatedAt").CurrentValue = DateTime.UtcNow;
+        //    }
+        //}
     }
 }
