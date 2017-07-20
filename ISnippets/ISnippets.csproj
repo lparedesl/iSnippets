@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot/css\style.css~RF3e4ac12.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="wwwroot\css\style.css" />
     <Content Include="wwwroot\css\style.min.css" />
     <Content Include="wwwroot\js\javascript.js" />
@@ -365,8 +369,10 @@
     <Content Include="wwwroot\lib\codemirror\theme\xq-light.css" />
     <Content Include="wwwroot\lib\codemirror\theme\yeti.css" />
     <Content Include="wwwroot\lib\codemirror\theme\zenburn.css" />
+    <Content Include="wwwroot\scss\style.scss" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="BuildWebCompiler" Version="1.11.326" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
