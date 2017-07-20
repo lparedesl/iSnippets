@@ -875,20 +875,6 @@
           "lib/netstandard1.3/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Data.Sqlite/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "SQLite": "3.13.0",
-          "System.Data.Common": "4.3.0"
-        },
-        "compile": {
-          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
-        }
-      },
       "Microsoft.DiaSymReader.Native/1.4.1": {
         "type": "package",
         "build": {
@@ -1002,20 +988,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Sqlite/1.1.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Data.Sqlite": "1.1.0",
-          "Microsoft.EntityFrameworkCore.Relational": "1.1.2",
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Tools/1.1.1": {
@@ -1981,33 +1953,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/SapientGuardian.MySql.Data.dll": {}
-        }
-      },
-      "SQLite/3.13.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/linux-x64/native/libsqlite3.so": {
-            "assetType": "native",
-            "rid": "linux-x64"
-          },
-          "runtimes/osx-x64/native/libsqlite3.dylib": {
-            "assetType": "native",
-            "rid": "osx-x64"
-          },
-          "runtimes/win7-x64/native/sqlite3.dll": {
-            "assetType": "native",
-            "rid": "win7-x64"
-          },
-          "runtimes/win7-x86/native/sqlite3.dll": {
-            "assetType": "native",
-            "rid": "win7-x86"
-          }
         }
       },
       "System.AppContext/4.3.0": {
@@ -4676,19 +4621,6 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "Microsoft.Data.Sqlite/1.1.0": {
-      "sha512": "iR2c1uzzyQUZDFvWrIScbNmKAxfZ0pxbwDZu77JH6KF0Y2+eBwy6Jz0w+j4HtgPehRWgF7Gj2YKdFP4FdrVFNg==",
-      "type": "package",
-      "path": "microsoft.data.sqlite/1.1.0",
-      "files": [
-        "lib/net451/Microsoft.Data.Sqlite.dll",
-        "lib/net451/Microsoft.Data.Sqlite.xml",
-        "lib/netstandard1.3/Microsoft.Data.Sqlite.dll",
-        "lib/netstandard1.3/Microsoft.Data.Sqlite.xml",
-        "microsoft.data.sqlite.1.1.0.nupkg.sha512",
-        "microsoft.data.sqlite.nuspec"
-      ]
-    },
     "Microsoft.DiaSymReader.Native/1.4.1": {
       "sha512": "oi9LCkKzSm7WgI0LsODDQUQdzldNdv9BU/QDoW9QMu+uN4baJXANkTWrjc2+aTqeftyhPXF1fn/m9jPo7mJ6FA==",
       "type": "package",
@@ -4766,19 +4698,6 @@
         "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.xml",
         "microsoft.entityframeworkcore.relational.design.1.1.2.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.design.nuspec"
-      ]
-    },
-    "Microsoft.EntityFrameworkCore.Sqlite/1.1.2": {
-      "sha512": "wCUqrbzvLXkL69fsrSrP1BfCp6dKgVlYrr8v9Laf3UQgPWNbpBhRSkYQne7DNuNo0RcMjRAQMnRd9ori55AWXw==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlite/1.1.2",
-      "files": [
-        "lib/net451/Microsoft.EntityFrameworkCore.Sqlite.dll",
-        "lib/net451/Microsoft.EntityFrameworkCore.Sqlite.xml",
-        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Sqlite.dll",
-        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Sqlite.xml",
-        "microsoft.entityframeworkcore.sqlite.1.1.2.nupkg.sha512",
-        "microsoft.entityframeworkcore.sqlite.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Tools/1.1.1": {
@@ -5669,25 +5588,6 @@
         "lib/netstandard1.3/SapientGuardian.MySql.Data.dll",
         "sapientguardian.mysql.data.6.9.816.nupkg.sha512",
         "sapientguardian.mysql.data.nuspec"
-      ]
-    },
-    "SQLite/3.13.0": {
-      "sha512": "uw0w5a/AW6rjwtjIQd8d6xMe91eqExzHl0jivej3zCAPfTf/DNxdS6eFvFrFiGBeKt+YZ+ZS2F+vliuoUPocPw==",
-      "type": "package",
-      "path": "sqlite/3.13.0",
-      "files": [
-        "build/net45/SQLite.props",
-        "lib/netstandard1.0/_._",
-        "runtimes/linux-x64/native/libsqlite3.so",
-        "runtimes/osx-x64/native/libsqlite3.dylib",
-        "runtimes/win10-arm/nativeassets/uap10.0/sqlite3.dll",
-        "runtimes/win10-x64/nativeassets/uap10.0/sqlite3.dll",
-        "runtimes/win10-x86/nativeassets/uap10.0/sqlite3.dll",
-        "runtimes/win7-x64/native/sqlite3.dll",
-        "runtimes/win7-x86/native/sqlite3.dll",
-        "sqlite-version.txt",
-        "sqlite.3.13.0.nupkg.sha512",
-        "sqlite.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -10334,7 +10234,6 @@
       "Microsoft.AspNetCore.StaticFiles >= 1.1.2",
       "Microsoft.EntityFrameworkCore >= 1.1.2",
       "Microsoft.EntityFrameworkCore.Design >= 1.1.2",
-      "Microsoft.EntityFrameworkCore.SQLite >= 1.1.2",
       "Microsoft.EntityFrameworkCore.Tools >= 1.1.1",
       "Microsoft.Extensions.Logging.Debug >= 1.1.2",
       "Microsoft.NETCore.App >= 1.1.2",
@@ -10395,10 +10294,6 @@
             "autoReferenced": true
           },
           "Microsoft.VisualStudio.Web.BrowserLink": {
-            "target": "Package",
-            "version": "1.1.2"
-          },
-          "Microsoft.EntityFrameworkCore.SQLite": {
             "target": "Package",
             "version": "1.1.2"
           },
