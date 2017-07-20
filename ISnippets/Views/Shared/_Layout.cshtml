@@ -8,6 +8,13 @@
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.15/datatables.min.css" />
+        @*<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.9.4/css/jquery.dataTables.css" />*@
+        <link href="~/lib/codemirror/lib/codemirror.css" rel="stylesheet" type="text/css" />
+        <link href="~/lib/codemirror/theme/neat.css" rel="stylesheet" type="text/css" />
+        <link href="~/lib/codemirror/theme/ambiance.css" rel="stylesheet" type="text/css" />
+        <link href="~/lib/codemirror/theme/material.css" rel="stylesheet" type="text/css" />
+        <link href="~/lib/codemirror/theme/neo.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="~/css/style.css" />
     </environment>
     <environment names="Staging,Production">
@@ -50,6 +57,12 @@
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.15/datatables.min.js"></script>
+        @*<script type="text/javascript" src="https://cdn.datatables.net/1.9.4/js/jquery.dataTables.js"></script>*@
+        <script src="~/lib/codemirror/lib/codemirror.js" type="text/javascript"></script>
+        <script src="~/lib/codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
+        <script src="~/lib/codemirror/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
+        <script src="~/lib/codemirror/mode/css/css.js" type="text/javascript"></script>
         <script src="~/js/javascript.js" asp-append-version="true"></script>
     </environment>
     <environment names="Staging,Production">
