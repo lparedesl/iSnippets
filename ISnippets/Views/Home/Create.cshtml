@@ -1,0 +1,61 @@
+﻿@model ISnippets.Models.Snippet
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Coffee</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Title" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger">
+                    @Html.ValidationMessageFor(model => model.Title)
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger">
+                    @Html.ValidationMessageFor(model => model.Description)
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Language" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Language" class="form-control" />
+                <span asp-validation-for="Language" class="text-danger">
+                    @Html.ValidationMessageFor(model => model.Language)
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="CodeSnippet" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <textarea asp-for="CodeSnippet"></textarea>
+                <span asp-validation-for="CodeSnippet" class="text-danger">
+                    @Html.ValidationMessageFor(model => model.CodeSnippet)
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
